@@ -1,0 +1,15 @@
+{
+  "name": "management-software",
+  "version": "1.0.0",
+  "description": "This is an IT shop managent software.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Adel Amrane",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.2.0"
+  }
+}
