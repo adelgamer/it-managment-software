@@ -1,0 +1,34 @@
+const fs = require("fs");
+
+function formatDateTime() {
+  // Create a new Date object
+  const now = new Date();
+
+  // Get date components
+  const day = String(now.getDate()).padStart(2, "0");
+  const month = String(now.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed
+  const year = now.getFullYear();
+
+  // Get time components
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
+
+  // Format the date and time
+  const formattedDate = `${day}/${month}/${year}`;
+  const formattedTime = `${hours}:${minutes}:${seconds}`;
+
+  // Combine date and time
+  const formattedDateTime = `${formattedDate} ${formattedTime}`;
+
+  // Output the result
+  console.log(formattedDateTime);
+  return formattedDateTime;
+}
+
+function log(message) {
+  const text = formatDateTime() + "  " + message + "\n";
+  fs.appendFileSync("./log.txt", text);
+}
+
+log("Testing log system");
