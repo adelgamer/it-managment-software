@@ -16,6 +16,7 @@ body {
 #logo-title-div img {
   width: 25%;
   height: auto;
+  border: wheat solid 2px;
 }
 
 #logo-title-div {
