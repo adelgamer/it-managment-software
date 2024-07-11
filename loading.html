@@ -4,17 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <title>IT management</title>
-
+  <link rel="stylesheet" href="style/loading.css">
 </head>
 
 <body>
-  <h1>This is the loading page</h1>
+  <!-- Main content div -->
+  <div id="main-div">
+    <!-- This div holds the logo and the title -->
+    <div id="logo-title-div">
+      <img src="temp/logo.jpg" alt="">
+      <h1 id="title">MANAGER</h1>
+    </div>
+
+    <!-- This div holds the slogan -->
+    <div id="slogan-div">
+      <p>
+        Made by Adel Amrane & Ibrahim Remili
+      </p>
+    </div>
+  </div>
 </body>
+
 <script src="modules/logger.js"></script>
 <script>
-  setTimeout(() => {
-    window.location = "./main.html";
-  }, 5000);
+  // setTimeout(() => {
+  //   window.location = "./main.html";
+  // }, 5000);
 </script>
 
 </html>
