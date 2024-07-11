@@ -8,8 +8,13 @@
 </head>
 
 <body>
-  <p>Hi this is the first page!</p>
+  <h1>This is the loading page</h1>
 </body>
 <script src="modules/logger.js"></script>
+<script>
+  setTimeout(() => {
+    window.location = "./main.html";
+  }, 5000);
+</script>
 
 </html>

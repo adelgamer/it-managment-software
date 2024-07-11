@@ -1,5 +1,6 @@
 const fs = require("fs");
 
+//This function format the date an time before logging it
 function formatDateTime() {
   // Create a new Date object
   const now = new Date();
@@ -22,13 +23,13 @@ function formatDateTime() {
   const formattedDateTime = `${formattedDate} ${formattedTime}`;
 
   // Output the result
-  console.log(formattedDateTime);
   return formattedDateTime;
 }
 
+//this function log a message into a text file an append the date an time prior the message
 function log(message) {
   const text = formatDateTime() + "  " + message + "\n";
   fs.appendFileSync("./log.txt", text);
 }
 
-log("Testing log system");
+log("log system is loaded successfully");

@@ -2,7 +2,7 @@
   "name": "management-software",
   "version": "1.0.0",
   "description": "This is an IT shop managent software.",
-  "main": "index.js",
+  "main": "loading.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
