@@ -1,38 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 242">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 167.226 175.452">
   <defs>
     <style>
       .cls-1 {
         fill: #662d91;
-        stroke: #662d91;
       }
 
       .cls-1, .cls-2, .cls-3 {
-        stroke-miterlimit: 10;
-      }
-
-      .cls-4 {
-        fill: #fff;
-        font-family: TwCenMT-CondensedExtraBold, 'Tw Cen MT Condensed Extra Bold';
-        font-size: 36px;
-        font-weight: 700;
+        stroke-width: 0px;
       }
 
       .cls-2 {
-        fill: #92278f;
-        stroke: #92278f;
+        fill: #fff;
       }
 
       .cls-3 {
-        fill: #00a79d;
-        stroke: #00a79d;
+        fill: #13a89e;
       }
     </style>
   </defs>
-  <path class="cls-1" d="m52.83,50.88h33.94v33.69h-44.03v-23.6c0-5.57,4.52-10.09,10.09-10.09Z"/>
-  <rect class="cls-3" x="89.88" y="50.88" width="31.38" height="33.69"/>
-  <rect class="cls-3" x="42.74" y="88.02" width="46.95" height="34.37"/>
-  <path class="cls-2" d="m93.14,88.02h28.12v24.36c0,5.53-4.49,10.01-10.01,10.01h-18.11v-34.37h0Z"/>
-  <text class="cls-4" transform="translate(56.01 79.74)"><tspan x="0" y="0">A</tspan></text>
-  <text class="cls-4" transform="translate(101.66 117.49)"><tspan x="0" y="0">I</tspan></text>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-1" d="m112.185,84.226H0v-51.912C0,14.467,14.899,0,33.277,0h78.908v84.226Z"/>
+      <path class="cls-1" d="m118.492,89.126h48.734v54.012c0,17.846-14.899,32.314-33.277,32.314h-15.457v-86.326Z"/>
+      <rect class="cls-3" x="118.492" width="48.734" height="84.226"/>
+      <rect class="cls-3" y="89.126" width="112.365" height="86.326"/>
+      <path class="cls-2" d="m61.367,56.779h-10.606l-1.43,9.779h-9.296l9.952-46.752h12.156l10.01,46.752h-9.235l-1.549-9.779Zm-9.713-5.844h8.819l-3.933-25.285h-.954l-3.933,25.285Z"/>
+      <path class="cls-2" d="m138.1,112.864h9.55v40.861h-9.55v-40.861Z"/>
+    </g>
+  </g>
 </svg>
