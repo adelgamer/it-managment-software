@@ -32,4 +32,4 @@ function log(message) {
   fs.appendFileSync("./log.txt", text);
 }
 
-log("log system is loaded successfully");
+module.exports = { log };

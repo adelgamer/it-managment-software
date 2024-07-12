@@ -6,7 +6,7 @@ const createWindow = () => {
     height: 600,
     minWidth: 800,
     minHeight: 600,
-    // The lines below solved the issue
+    // The lines below activates node js
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,

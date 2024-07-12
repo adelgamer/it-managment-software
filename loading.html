@@ -25,8 +25,13 @@
   </div>
 </body>
 
-<script src="modules/logger.js"></script>
 <script>
+  //importing logging modules
+  const logger = require("./modules/logger.js");
+  //logging
+  logger.log("Starting program loading page");
+
+  //After 5s the user will be redirected to main page
   setTimeout(() => {
     window.location = "./main.html";
   }, 5000);
