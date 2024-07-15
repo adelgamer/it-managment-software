@@ -1,1 +1,71 @@
 @import url("var.css");
+
+div {
+  border: 2px solid red;
+  color: aqua;
+}
+
+#container-buttons-search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#container-buttons {
+  width: 68%;
+}
+
+#container-search {
+  width: 30%;
+}
+
+#container-tabs {
+  width: 100%;
+  text-align: center;
+}
+
+#container-list {
+  height: 90vh;
+}
+
+#container-service-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#body-1 {
+  width: 32%;
+  height: 20vh;
+}
+
+#body-2 {
+  width: 32%;
+  height: 20vh;
+}
+
+#body-3 {
+  width: 32%;
+  height: 20vh;
+}
+
+#container-profile-name-date {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#container-profile {
+  width: 49%;
+}
+
+#container-name-date {
+  width: 49%;
+}
+
+#container-edit-delete {
+  width: 100%;
+  text-align: right;
+}

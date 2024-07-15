@@ -5,13 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IT management</title>
-  <link rel="stylesheet" href="style/loading.css">
+  <link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
-  <h1>This is the main page</h1>
+  <div id="container-buttons-search">
+    <div id="container-buttons">buttons</div>
+    <div id="container-search">search</div>
+  </div>
+  <!-- This is the container of the entire list with it's services  -->
+  <div id="container-list">
+    <!-- Container of the tabs only -->
+    <div id="container-tabs">All | Working | Pending | Done</div>
+    <!-- This is the container of a service, this container is repeated with all it's element -->
+    <div id="container-service">
+      <!-- The body of the service such as description, name, profile, id... -->
+      <div id="container-service-body">
+        <!-- The body is devieded into 3 vertical bodies -->
+        <div id="body-1">
+          <div id="container-profile-name-date">
+            <div id="container-profile">Profile image</div>
+            <div id="container-name-date">Name and date and time</div>
+          </div>
+          <div id="container-description">Description go here</div>
+        </div>
+        <div id="body-2"></div>
+        <div id="body-3"></div>
+      </div>
+      <!-- The delete and edit buttons are here -->
+      <div id="container-edit-delete">Edit | Delete</div>
+    </div>
+  </div>
 </body>
-
 <script>
   //importing logger and logging
   const logger = require("./modules/logger.js");
