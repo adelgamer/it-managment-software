@@ -10,13 +10,21 @@
 
 <body>
   <div id="container-buttons-search">
-    <div id="container-buttons">buttons</div>
-    <div id="container-search">search</div>
+    <div id="container-buttons">
+      <button id="add-button" class="controll-buttons"></button>
+      <button id="export-button" class="controll-buttons"></button>
+    </div>
+    <div id="container-search"><input class="search-service" type="text" placeholder="Search"></div>
   </div>
   <!-- This is the container of the entire list with it's services  -->
   <div id="container-list">
     <!-- Container of the tabs only -->
-    <div id="container-tabs">All | Working | Pending | Done</div>
+    <div id="container-tabs">
+      <div id="all-tab" class="tabs-buttons active-tab">All</div>
+      <div id="working-tab" class="tabs-buttons">Working</div>
+      <div id="pending-tab" class="tabs-buttons">Pending</div>
+      <div id="done-tab" class="tabs-buttons">Done</div>
+    </div>
     <!-- This is the container of a service, this container is repeated with all it's element -->
     <div id="container-service">
       <!-- The body of the service such as description, name, profile, id... -->
@@ -24,10 +32,15 @@
         <!-- The body is devieded into 3 vertical bodies -->
         <div id="body-1">
           <div id="container-profile-name-date">
-            <div id="container-profile">Profile image</div>
-            <div id="container-name-date">Name and date and time</div>
+            <div id="container-profile"><img src="./ressources/icons/boy.png" alt="" srcset=""></div>
+            <div id="container-name-date">Name <br>and date and time</div>
           </div>
-          <div id="container-description">Description go here</div>
+          <div id="container-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+            dapibus. Vivamus elementum </div>
         </div>
         <div id="body-2"></div>
         <div id="body-3"></div>
