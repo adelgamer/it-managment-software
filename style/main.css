@@ -1,9 +1,9 @@
 @import url("var.css");
 
-div {
+/* div {
   border: 1px solid red;
   color: black;
-}
+} */
 
 #container-buttons-search {
   display: flex;
@@ -41,11 +41,17 @@ div {
   background-color: #d9d9d9;
 }
 
-#container-service {
+.container-service {
   height: fit-content;
+  /* border: 1px solid black; */
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 1vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
-#container-service-body {
+.container-service-body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -53,37 +59,39 @@ div {
   height: fit-content;
 }
 
-#body-1 {
+.body-1 {
   width: 32%;
+  padding-left: 1.5%;
 }
 
-#body-2 {
+.body-2 {
   width: 32%;
-  height: 20vh;
+  height: fit-content;
+  padding-left: 1%;
 }
 
-#body-3 {
+.body-3 {
   width: 32%;
-  height: 20vh;
+  height: fit-content;
 }
 
-#container-profile-name-date {
+.container-profile-name-date {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-#container-profile {
+.container-profile {
   width: 25%;
   height: 90%;
 }
 
-#container-name-date {
+.container-name-date {
   width: 73%;
   height: 90%;
 }
 
-#container-edit-delete {
+.container-edit-delete {
   width: 100%;
   text-align: right;
 }
@@ -123,11 +131,46 @@ div {
   text-align: center;
 }
 
-#container-profile img {
+.container-profile img {
   width: 90%;
-  margin-left: 10%;
+  /* margin-left: 10%; */
 }
 
 .active-tab {
   background-color: #d9d9d9;
+}
+.services {
+  overflow-y: scroll;
+  height: 75vh;
+  background-color: #d9d9d9;
+}
+
+.customer-name {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.service-title {
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.service-status {
+  font-size: larger;
+  font-weight: 600;
+}
+.service-buttons {
+  border: none;
+  border-radius: 15px;
+  height: 5vh;
+  width: 9%;
+  color: white;
+}
+
+.green-bg {
+  background-color: #13a89e;
+}
+
+.red-bg {
+  background-color: #ed6172;
 }

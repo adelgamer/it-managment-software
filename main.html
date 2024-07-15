@@ -26,27 +26,46 @@
       <div id="done-tab" class="tabs-buttons">Done</div>
     </div>
     <!-- This is the container of a service, this container is repeated with all it's element -->
-    <div id="container-service">
-      <!-- The body of the service such as description, name, profile, id... -->
-      <div id="container-service-body">
-        <!-- The body is devieded into 3 vertical bodies -->
-        <div id="body-1">
-          <div id="container-profile-name-date">
-            <div id="container-profile"><img src="./ressources/icons/boy.png" alt="" srcset=""></div>
-            <div id="container-name-date">Name <br>and date and time</div>
+    <div class="services">
+      <div class="container-service">
+        <!-- The body of the service such as description, name, profile, id... -->
+        <div class="container-service-body">
+          <!-- The body is devieded into 3 vertical bodies -->
+          <div class="body-1">
+            <div class="container-profile-name-date">
+              <div class="container-profile"><img src="./ressources/icons/boy.png" alt="" srcset=""></div>
+              <div class="container-name-date">
+                <p class="customer-name">Adel Amrane</p>
+                <p>2024/05/12 12:47</p>
+              </div>
+            </div>
+            <div class="container-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+              ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+              quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+              dapibus. Vivamus elementum </div>
           </div>
-          <div id="container-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-            quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-            dapibus. Vivamus elementum </div>
+          <div class="body-2">
+            <p class="service-title">Upgrade RAM</p>
+            <p>#157</p>
+            <p>0556 35 7514</p>
+            <p>Status: pending</p>
+            <p>Price: 4800</p>
+            <p>Price received: 3000</p>
+          </div>
+          <div class="body-3">
+            <p class="service-status">Repair</p>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur </p>
+          </div>
         </div>
-        <div id="body-2"></div>
-        <div id="body-3"></div>
+        <!-- The delete and edit buttons are here -->
+        <div class="container-edit-delete">
+          <button id="edit-button-" class="service-buttons green-bg">Edit</button>
+          <button id="delete-button-" class="service-buttons red-bg">Delete</button>
+        </div>
       </div>
-      <!-- The delete and edit buttons are here -->
-      <div id="container-edit-delete">Edit | Delete</div>
     </div>
   </div>
 </body>
