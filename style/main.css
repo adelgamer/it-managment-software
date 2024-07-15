@@ -174,3 +174,13 @@
 .red-bg {
   background-color: #ed6172;
 }
+
+#add-service-pop-up {
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  margin-top: 20px;
+  margin-left: 100px;
+  background-color: #d9d9d9;
+  display: none;
+}
