@@ -8,7 +8,56 @@
   <link rel="stylesheet" href="style/main.css">
 </head>
 <!-- add service pop up -->
-<iframe style="display: none;" id="add-service-pop-up" src="./pop-ups/add-service.html"></iframe>
+<div id="add-service-popup" style="display: none;">
+  <link rel="stylesheet" href="./style/add-service.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="left">
+        <label>Customer name</label>
+        <input type="text" placeholder="john Doe">
+        <label>Phone number</label>
+        <input type="text" placeholder="0584 47 12 35">
+        <label>Service title</label>
+        <input type="text" placeholder="Change RAM">
+        <label>Service price</label>
+        <input type="number" min="0" step="100" value="0" placeholder="4600">
+        <label>Price received</label>
+        <input type="number" min="0" step="100" value="0" placeholder="0">
+      </div>
+
+      <div class="right">
+        <label>Service type</label>
+        <select>
+          <option>Sell</option>
+          <option>Repair</option>
+          <option>Installation</option>
+          <option>Upgrade</option>
+          <option>Cleaning</option>
+        </select>
+        <label>Service Status</label>
+        <select>
+          <option>Pending</option>
+          <option>Working on it</option>
+          <option>Done</option>
+        </select>
+        <label>Service description</label>
+        <textarea rows="4" placeholder="Write a description here"></textarea>
+        <label>Notes</label>
+        <textarea rows="4" placeholder="Write notes here"></textarea>
+      </div>
+    </div>
+
+    <div class="save-button">
+      <button id="save">Save</button>
+    </div>
+
+  </body>
+
+</html>
+</div>
 
 <body>
   <div id="container-buttons-search">
@@ -16,7 +65,7 @@
       <button id="add-button" class="controll-buttons"></button>
       <button id="export-button" class="controll-buttons"></button>
     </div>
-    <div id="container-search"><input class="search-service" type="text" placeholder="Search"></div>
+    <div id="container-search"><input id="search-input" class="search-service" type="text" placeholder="Search"></div>
   </div>
   <!-- This is the container of the entire list with it's services  -->
   <div id="container-list">
@@ -71,11 +120,9 @@
     </div>
   </div>
 </body>
-<script src="./modules/main-page.js"></script>
-<script>
-  //importing logger and logging
-  const logger = require("./modules/logger.js");
-  logger.log("Main page");
-</script>
+<script src="./modules/helper.js"></script>
+<script defer type="module" src="./modules/main-page.js"></script>
+<script defer src="./modules/add-service.js"></script>
+<script src="./modules/databse.js"></script>
 
 </html>

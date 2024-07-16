@@ -1,13 +1,4 @@
-function addServicePopUp() {
-  const display = popUp.style.display;
-  if (display === "none") {
-    popUp.style.display = "block";
-  } else {
-    popUp.style.display = "none";
-  }
-}
-
-const popUp = document.getElementById("add-service-pop-up");
+const popUp = document.getElementById("add-service-popup");
 
 document
   .getElementById("add-button")
