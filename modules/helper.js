@@ -64,3 +64,78 @@ function addServicePopUp() {
     popUp.style.display = "none";
   }
 }
+
+function prepareHTML(row) {
+  console.log(row);
+  const html = `<div class='container-service'>
+  <div class='container-service-body'>
+    <!-- The body is divided into 3 vertical bodies -->
+    <div class='body-1'>
+      <div class='container-profile-name-date'>
+        <div class='container-profile'><img src='./ressources/icons/boy.png' alt='' srcset=''></div>
+        <div class='container-name-date'>
+          <p class='customer-name'>${row["customer_name"]}</p>
+          <p>${row["date"]} ${row["time"]}</p>
+        </div>
+      </div>
+      <div class='container-description'>${row["description"]}</div>
+    </div>
+    <div class='body-2'>
+      <p class='service-title'>${row["service_title"]}</p>
+      <p>#${row["id"]}</p>
+      <p>${row["phone"]}</p>
+      <p>Status: ${row["status"]}</p>
+      <p>Price: ${row["service_price"]}</p>
+      <p>Price received: ${row["price_received"]}</p>
+    </div>
+    <div class='body-3'>
+      <p class='service-status'>${row["service_type"]}</p>
+      <p>${row["note"]}</p>
+    </div>
+  </div>
+  <!-- The delete and edit buttons are here -->
+  <div class='container-edit-delete'>
+    <button id='edit-button-' class='service-buttons green-bg'>Edit</button>
+    <button id='delete-button-' class='service-buttons red-bg'>Delete</button>
+  </div>
+</div>
+`;
+  return html;
+}
+
+function injectServicesHTML(services) {
+  const list = document.getElementById("services");
+  services.forEach((row) => {
+    const html = prepareHTML(row);
+    list.insertAdjacentHTML("afterbegin", html);
+  });
+}
+
+function escapeString(str) {
+  if (typeof str !== "string") {
+    return str;
+  }
+
+  return str.replace(/[\0\x08\x09\x1a\n\r"'\\\%]/g, function (char) {
+    switch (char) {
+      case "\0":
+        return "\\0";
+      case "\x08":
+        return "\\b";
+      case "\x09":
+        return "\\t";
+      case "\x1a":
+        return "\\z";
+      case "\n":
+        return "\\n";
+      case "\r":
+        return "\\r";
+      case '"':
+      case "'":
+      case "\\":
+      case "%":
+        return "\\" + char; // prepends a backslash to backslash, percent,
+      // and double/single quotes
+    }
+  });
+}

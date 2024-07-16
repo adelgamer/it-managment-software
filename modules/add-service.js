@@ -10,6 +10,7 @@ function getAddFormInput() {
   allInputsValues.pop();
   console.log(allInputsValues);
   insertService(allInputsValues);
+  retreiveServices();
   cleanInputs(inputs);
 }
 
