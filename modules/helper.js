@@ -78,25 +78,28 @@ function prepareHTML(row) {
           <p>${row["date"]} ${row["time"]}</p>
         </div>
       </div>
-      <div class='container-description'>${row["description"]}</div>
+      <div class='container-description' id='description-${row["id"]}'>${row["description"]}</div>
     </div>
     <div class='body-2'>
       <p class='service-title'>${row["service_title"]}</p>
       <p>#${row["id"]}</p>
       <p>${row["phone"]}</p>
-      <p>Status: ${row["status"]}</p>
+      <p id='status-${row["id"]}'>Status: ${row["status"]}</p>
       <p>Price: ${row["service_price"]}</p>
       <p>Price received: ${row["price_received"]}</p>
     </div>
     <div class='body-3'>
       <p class='service-status'>${row["service_type"]}</p>
-      <p>${row["note"]}</p>
+      <div id='note-${row["id"]}'>${row["note"]}</div>
     </div>
   </div>
   <!-- The delete and edit buttons are here -->
+  <div style='display: none' class='delete-service-div' id='delete-div-${row["id"]}'>
+  here i'am i
+  </div>
   <div class='container-edit-delete'>
     <button id='edit-button-' class='service-buttons green-bg'>Edit</button>
-    <button id='delete-button-' class='service-buttons red-bg'>Delete</button>
+    <button id='delete-button-${row["id"]}' class='service-buttons red-bg'>Delete</button>
   </div>
 </div>
 `;
@@ -127,4 +130,39 @@ function getSearchInput() {
   console.log(searchKeyword);
   search = searchKeyword;
   searchService(searchKeyword);
+}
+
+function separateCharsAndNumbers(input) {
+  let chars = "";
+  let numbers = "";
+
+  for (let i = 0; i < input.length; i++) {
+    if (isNaN(input[i])) {
+      chars += input[i];
+    } else {
+      numbers += input[i];
+    }
+  }
+
+  return [chars, numbers];
+}
+
+function tabChooser(activeTab) {
+  switch (activeTab) {
+    case "All":
+      retreiveServices();
+      break;
+    case "Working on it":
+      retreiveWorkingServices();
+      break;
+    case "Pending":
+      retreivePendingServices();
+      break;
+    case "Done":
+      retreiveDoneServices();
+      break;
+    default:
+      retreiveServices();
+      break;
+  }
 }

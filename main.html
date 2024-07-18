@@ -88,23 +88,7 @@
 <script>
   var search = "";
   var activeTab = "All";
-  switch (activeTab) {
-    case "All":
-      retreiveServices();
-      break;
-    case "Working on it":
-      retreiveWorkingServices();
-      break;
-    case "Pending":
-      retreivePendingServices();
-      break;
-    case "Done":
-      retreiveDoneServices();
-      break;
-    default:
-      retreiveServices();
-      break;
-  }
+  tabChooser(activeTab)
 </script>
 
 </html>

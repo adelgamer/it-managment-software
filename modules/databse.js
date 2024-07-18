@@ -85,3 +85,64 @@ function searchService(keyword) {
     injectServicesHTML(rows);
   });
 }
+
+function deleteService(id) {
+  const sql = `DELETE FROM services WHERE id = ?`;
+  db.run(sql, [id]);
+  tabChooser(activeTab);
+}
+
+function saveEditedDescription(description, id) {
+  // Detailed logging
+  console.log(`Attempting to update description with id: ${id}`);
+  console.log(`New description: ${description}`);
+
+  // SQL query
+  const sql = "UPDATE services SET description = ? WHERE id = ?;";
+
+  // Executing the SQL query
+  db.run(sql, [description, id], function (err) {
+    if (err) {
+      console.error("Error executing SQL query:", err.message);
+      return;
+    }
+
+    // Logging the changes
+    console.log("Update successful!");
+    console.log(`Rows affected: ${this.changes}`);
+  });
+}
+
+function saveEditedStatus(status, id) {
+  console.log(`Attempting to update status with id: ${id}`);
+  console.log(`New status: ${status}`);
+
+  const sql = "UPDATE services SET status = ? WHERE id = ?;";
+
+  db.run(sql, [status, id], function (err) {
+    if (err) {
+      console.error("Error executing SQL query:", err.message);
+      return;
+    }
+
+    console.log("Update successful!");
+    console.log(`Rows affected: ${this.changes}`);
+  });
+}
+
+function saveEditedNote(note, id) {
+  console.log(`Attempting to update note with id: ${id}`);
+  console.log(`New note: ${note}`);
+
+  const sql = "UPDATE services SET note = ? WHERE id = ?;";
+
+  db.run(sql, [note, id], function (err) {
+    if (err) {
+      console.error("Error executing SQL query:", err.message);
+      return;
+    }
+
+    console.log("Update successful!");
+    console.log(`Rows affected: ${this.changes}`);
+  });
+}
