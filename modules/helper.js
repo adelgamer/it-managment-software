@@ -105,37 +105,26 @@ function prepareHTML(row) {
 
 function injectServicesHTML(services) {
   const list = document.getElementById("services");
+  list.innerHTML = "";
   services.forEach((row) => {
     const html = prepareHTML(row);
     list.insertAdjacentHTML("afterbegin", html);
   });
 }
 
-function escapeString(str) {
-  if (typeof str !== "string") {
-    return str;
-  }
-
-  return str.replace(/[\0\x08\x09\x1a\n\r"'\\\%]/g, function (char) {
-    switch (char) {
-      case "\0":
-        return "\\0";
-      case "\x08":
-        return "\\b";
-      case "\x09":
-        return "\\t";
-      case "\x1a":
-        return "\\z";
-      case "\n":
-        return "\\n";
-      case "\r":
-        return "\\r";
-      case '"':
-      case "'":
-      case "\\":
-      case "%":
-        return "\\" + char; // prepends a backslash to backslash, percent,
-      // and double/single quotes
-    }
+function changeTabColor(tab) {
+  const allTabs = document.querySelectorAll(".tabs-buttons");
+  allTabs.forEach((Tab) => {
+    Tab.classList.remove("active-tab");
+    Tab.classList.add("inactive-tab");
   });
+  document.getElementById(tab).classList.remove("inactive-tab");
+  document.getElementById(tab).classList.add("active-tab");
+}
+
+function getSearchInput() {
+  const searchKeyword = document.getElementById("search-input").value;
+  console.log(searchKeyword);
+  search = searchKeyword;
+  searchService(searchKeyword);
 }

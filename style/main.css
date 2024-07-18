@@ -139,6 +139,11 @@
 .active-tab {
   background-color: #d9d9d9;
 }
+
+.inactive-tab {
+  background-color: #a7a5a5;
+}
+
 .services {
   overflow-y: scroll;
   height: 75vh;

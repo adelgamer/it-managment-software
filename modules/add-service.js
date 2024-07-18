@@ -8,6 +8,8 @@ function getAddFormInput() {
     allInputsValues.push(element.value);
   });
   allInputsValues.pop();
+  allInputsValues.push(formatDate());
+  allInputsValues.push(formatTime());
   console.log(allInputsValues);
   insertService(allInputsValues);
   retreiveServices();
@@ -25,12 +27,4 @@ function cleanInputs(inputs) {
   addServicePopUp();
 }
 
-function getSearchInput() {
-  const searchKeyword = document.getElementById("search-input").value;
-  console.log(searchKeyword);
-}
-
 document.getElementById("save").addEventListener("click", getAddFormInput);
-document
-  .getElementById("search-input")
-  .addEventListener("keyup", getSearchInput);

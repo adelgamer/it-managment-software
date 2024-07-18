@@ -46,3 +46,42 @@ function retreivePendingServices() {
     injectServicesHTML(rows);
   });
 }
+
+function retreiveDoneServices() {
+  const sql = "SELECT * FROM services WHERE status = 'Done';";
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      throw err;
+    }
+    // console.log(rows);
+    injectServicesHTML(rows);
+  });
+}
+
+function searchService(keyword) {
+  let sql;
+  let params;
+
+  if (activeTab === "All") {
+    sql = `
+      SELECT * FROM services 
+      WHERE UPPER(CONCAT(service_title, description, customer_name, note)) LIKE ?;
+    `;
+    params = [`%${keyword.toUpperCase()}%`];
+  } else {
+    sql = `
+      SELECT * FROM services 
+      WHERE UPPER(CONCAT(service_title, description, customer_name, note)) LIKE ? 
+      AND status = ?;
+    `;
+    params = [`%${keyword.toUpperCase()}%`, activeTab];
+  }
+
+  console.log(activeTab + " here");
+  db.all(sql, params, (err, rows) => {
+    if (err) {
+      throw err;
+    }
+    injectServicesHTML(rows);
+  });
+}

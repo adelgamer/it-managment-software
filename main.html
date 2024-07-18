@@ -86,7 +86,25 @@
 <script defer src="./modules/add-service.js"></script>
 <script src="./modules/databse.js"></script>
 <script>
-  const allServices = retreiveServices();
+  var search = "";
+  var activeTab = "All";
+  switch (activeTab) {
+    case "All":
+      retreiveServices();
+      break;
+    case "Working on it":
+      retreiveWorkingServices();
+      break;
+    case "Pending":
+      retreivePendingServices();
+      break;
+    case "Done":
+      retreiveDoneServices();
+      break;
+    default:
+      retreiveServices();
+      break;
+  }
 </script>
 
 </html>
