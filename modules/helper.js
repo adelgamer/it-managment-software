@@ -74,22 +74,22 @@ function prepareHTML(row) {
       <div class='container-profile-name-date'>
         <div class='container-profile'><img src='./ressources/icons/boy.png' alt='' srcset=''></div>
         <div class='container-name-date'>
-          <p class='customer-name'>${row["customer_name"]}</p>
+          <p class='customer-name' id='name-${row["id"]}'>${row["customer_name"]}</p>
           <p>${row["date"]} ${row["time"]}</p>
         </div>
       </div>
       <div class='container-description' id='description-${row["id"]}'>${row["description"]}</div>
     </div>
     <div class='body-2'>
-      <p class='service-title'>${row["service_title"]}</p>
+      <p class='service-title' id='title-${row["id"]}'>${row["service_title"]}</p>
       <p>#${row["id"]}</p>
-      <p>${row["phone"]}</p>
+      <p id='phone-${row["id"]}'>${row["phone"]}</p>
       <p id='status-${row["id"]}'>Status: ${row["status"]}</p>
-      <p>Price: ${row["service_price"]}</p>
-      <p>Price received: ${row["price_received"]}</p>
+      <p id='price-${row["id"]}'>Price: ${row["service_price"]}</p>
+      <p id='price-received-${row["id"]}'>Price received: ${row["price_received"]}</p>
     </div>
     <div class='body-3'>
-      <p class='service-status'>${row["service_type"]}</p>
+      <p class='service-status' id='service-type-${row["id"]}'>${row["service_type"]}</p>
       <div id='note-${row["id"]}'>${row["note"]}</div>
     </div>
   </div>
@@ -98,7 +98,6 @@ function prepareHTML(row) {
   here i'am i
   </div>
   <div class='container-edit-delete'>
-    <button id='edit-button-' class='service-buttons green-bg'>Edit</button>
     <button id='delete-button-${row["id"]}' class='service-buttons red-bg'>Delete</button>
   </div>
 </div>

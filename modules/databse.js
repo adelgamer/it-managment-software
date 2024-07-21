@@ -25,6 +25,18 @@ function retreiveServices() {
   });
 }
 
+function retreiveServicesCSV() {
+  const sql = "SELECT * FROM services;";
+  return new Promise((resolve, reject) => {
+    db.all(sql, [], (err, rows) => {
+      if (err) {
+        return reject(err);
+      }
+      resolve(rows);
+    });
+  });
+}
+
 function retreiveWorkingServices() {
   const sql = "SELECT * FROM services WHERE status = 'Working on it';";
   db.all(sql, [], (err, rows) => {
@@ -143,6 +155,20 @@ function saveEditedNote(note, id) {
     }
 
     console.log("Update successful!");
+    console.log(`Rows affected: ${this.changes}`);
+  });
+}
+
+// General function to save edited fields
+function saveEditedField(field, value, id) {
+  console.log(id);
+  const sql = `UPDATE services SET ${field} = ? WHERE id = ?;`;
+  db.run(sql, [value, id], function (err) {
+    if (err) {
+      console.error(`Error executing SQL query for ${field}:`, err.message);
+      return;
+    }
+    console.log(`Update of ${field} successful!`);
     console.log(`Rows affected: ${this.changes}`);
   });
 }
